@@ -1,0 +1,11 @@
+*~
+G*
+*.o
+*.a
+*.log
+*.pb.h
+*.pb.cc
+ndb/ndb
+deps/*
+!deps/build.sh
+coverage

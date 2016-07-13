@@ -1,0 +1,29 @@
+{
+  "logger": {
+    "level": "INFO",
+    "filename": "nicedb.log"
+  },
+  "server": {
+    "num_workers": "32",
+    "max_clients": "4096",
+    "timeout_secs": "300",
+    "buffer_size": "32M",
+    "channel_size": "4096"
+  },
+  "engine": {
+    "dbname": "nicedb",
+    "WAL_ttl_seconds": "86400",
+    "WAL_size_limit": "8G",
+    "memtable_size": "1G",
+    "block_cache_size": "4G"
+  },
+  "command": {
+    "access_mode": "rw",
+    "max_arguments": "4096",
+    "slowlogs_maxlen": "1024",
+    "slowlogs_slower_than_usecs": "40000"
+  }
+  "replica": {
+    "replicate_limit": "10000"
+  }
+}

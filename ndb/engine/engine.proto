@@ -1,0 +1,42 @@
+syntax = "proto2";
+
+package ndb.pb;
+
+enum Pruning {
+  MIN = 1;
+  MAX = 2;
+}
+
+message Meta {
+  enum Type {
+    SET  = 1;
+    OSET = 2;
+    ZSET = 3;
+    LIST = 4;
+    HASH = 5;
+  }
+
+  required Type    type     = 1;
+  optional bool    deleted  = 2;
+  optional uint64  version  = 3;
+  optional uint64  maxlen   = 4;
+  optional uint64  length   = 5;
+  optional Pruning pruning  = 6;
+  optional uint64  minindex = 7;
+  optional uint64  maxindex = 8;
+}
+
+message Value {
+  oneof value {
+    int64 int64 = 1;
+    bytes bytes = 2;
+    Meta  meta  = 3;
+  }
+  optional uint64 expire = 4;
+}
+
+message Configs {
+  optional uint64  expire  = 1;
+  optional uint64  maxlen  = 2;
+  optional Pruning pruning = 3;
+}
