@@ -1,5 +1,5 @@
 # ndb
-基于RocksDB，100%兼容Redis的协议和命令，持久化kv存储引擎。
+基于RocksDB，100%兼容Redis的协议和数据结构，持久化kv存储引擎。
 
 ##架构设计
 ![](https://github.com/nice-opentech/ndb/blob/master/ndb.png)
