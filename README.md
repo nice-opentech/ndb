@@ -2,7 +2,7 @@
 基于RocksDB，100%兼容Redis的协议和命令，持久化kv存储引擎。
 
 ##架构设计
-![](./ndb.jpg)
+![](https://github.com/nice-opentech/ndb/blob/master/ndb.png)
 **注：ndbrouter待开源**
 ndbrouter 启动时，先从 ndbcenter 拉取自己的配置，并且获取所在集群的所有 ndb 节点的信息，然后把自己注册到 ndbcenter。
 ndbrouter 运行时，会定期从 ndbcenter 获取当前的所有 ndb 节点，如果发生了变化会做相应的更新。
